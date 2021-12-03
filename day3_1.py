@@ -7,14 +7,12 @@ epsilon = 0
 
 n_bits = len(str(input[0]))
 
-for i in range(0, n_bits):
-    count_zero = 0
-    for line in input:
-        count_zero += str(line)[i] == '0'
+for b in range(0, n_bits):
+    count_zero = len(list(filter(lambda input: input[b]=='0', input)))
 
     dominant_bit = count_zero < int(len(input) / 2)
-    gamma+=dominant_bit << (n_bits - 1 - i)
-    epsilon+=(not dominant_bit) << (n_bits - 1 - i)
+    gamma+=dominant_bit << (n_bits - 1 - b)
+    epsilon+=(not dominant_bit) << (n_bits - 1 - b)
 
 
 print(f"Gamma: {gamma}\nEpsilon: {epsilon}")
