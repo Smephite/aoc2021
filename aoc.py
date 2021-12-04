@@ -3,7 +3,7 @@ from typing import List
 
 def aoc() -> List[str]:
     fileName = ""
-    if len(sys.argv) == 2:
+    if len(sys.argv) >= 2:
         fileName = str(sys.argv[1])
     else:
         fileName = input("Path to puzzle input: ")

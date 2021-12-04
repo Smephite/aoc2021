@@ -1,8 +1,8 @@
-from typing import Dict, List
-import aoc
+import sys, os
+sys.path.append(os.path.abspath(".."))
+from aoc21 import aoc
 
 from typing import Dict, List
-import aoc
 
 class Bingo:
     grid : Dict[int, int]
