@@ -51,7 +51,7 @@ def main():
         for script in [part1_name, part2_name]:
             os.mknod(script)
             with open(script, "w") as file:
-                file.write('import sys, os\nsys.path.append(os.path.abspath(".."))\nfrom aoc21 import aoc')
+                file.write('import sys, os\nsys.path.append(os.path.abspath("."))\nimport aoc')
         
         if session_id is not None:
             print(f"Downloading input for day {day}")
