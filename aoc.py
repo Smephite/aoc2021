@@ -1,6 +1,17 @@
 import sys
 from typing import List
 
+def raw_aoc() -> str:
+    fileName = ""
+    if len(sys.argv) >= 2:
+        fileName = str(sys.argv[1])
+    else:
+        fileName = input("Path to puzzle input: ")
+    raw_input = ""
+    with open(fileName) as file:
+        raw_input = "".join(file.readlines())
+    return raw_input
+
 def aoc() -> List[str]:
     fileName = ""
     if len(sys.argv) >= 2:
